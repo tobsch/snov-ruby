@@ -1,0 +1,10 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+
+Style:
+  Enabled: false
