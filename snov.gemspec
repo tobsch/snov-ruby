@@ -5,6 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = Snov::VERSION
   spec.authors       = ["Grant Petersen-Speelman"]
   spec.email         = ["grantspeelman@gmail.com"]
+  spec.license       = "MIT"
 
   spec.summary       = %q{Snov client to interact with snov api}
   spec.description   = %q{Snov client to interact with snov api}
