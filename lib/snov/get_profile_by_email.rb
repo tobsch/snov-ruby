@@ -60,7 +60,10 @@ module Snov
 
       attr_accessor :id, :name, :first_name, :last_name, :industry, :country, :locality, :success, :source
       attr_accessor :logo, :last_update_date, :message
-      attr_reader :social, :current_jobs, :previous_jobs
+
+      def social
+        Array.wrap(@social)
+      end
 
       def social=(val)
         @social = Array.wrap(val).map do |rel|
@@ -68,10 +71,18 @@ module Snov
         end
       end
 
+      def current_jobs
+        Array.wrap(@current_jobs)
+      end
+
       def current_jobs=(val)
         @current_jobs = Array.wrap(val).map do |rel|
           Job.new(rel)
         end
+      end
+
+      def previous_jobs
+        Array.wrap(@previous_jobs)
       end
 
       def previous_jobs=(val)

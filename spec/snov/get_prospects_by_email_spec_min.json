@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "xusD3-T_K5IktGoaa8Jc8A==",
+      "name": "Gavin Vanrooyen",
+      "firstName": "Gavin",
+      "lastName": "Vanrooyen",
+      "industry": "Entertainment",
+      "country": "United States",
+      "locality": "Greater Atlanta Area",
+      "lastUpdateDate": {
+        "date": "2019-09-11 12:37:58.000000",
+        "timezone_type": 3,
+        "timezone": "UTC"
+      }
+    }
+  ]
+}
