@@ -1,4 +1,4 @@
-## [Unreleased]
+## [0.1.1]
 
 ### Fixed
 * GetProspectsByEmail & GetProspectList to always return arrays when expecting one
