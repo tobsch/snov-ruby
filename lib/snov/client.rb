@@ -46,7 +46,6 @@ module Snov
         req.options.timeout = timeout_seconds # open/read timeout in seconds
         req.options.open_timeout = timeout_seconds # connection open timeout in seconds
       end
-      p resp
       parse_response(resp, path, params)
     rescue Faraday::TimeoutError, Timeout::Error => e
       raise TimedOut, e.message
