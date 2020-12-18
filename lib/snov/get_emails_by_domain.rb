@@ -37,7 +37,7 @@ module Snov
       include ActiveModel::Model
 
       attr_accessor :email, :first_name, :last_name, :position, :source_page, 
-        :company_name, :type, :status
+        :company_name, :type, :status, :phone
     end
   end
 end
