@@ -41,6 +41,17 @@ module Snov
       raise TimedOut, e.message
     end
 
+    def get_v2(path, params = {})
+      resp = conn.get(path, params.merge('access_token' => access_token)) do |req|
+        req.options.timeout = timeout_seconds # open/read timeout in seconds
+        req.options.open_timeout = timeout_seconds # connection open timeout in seconds
+      end
+      p resp
+      parse_response(resp, path, params)
+    rescue Faraday::TimeoutError, Timeout::Error => e
+      raise TimedOut, e.message
+    end
+
     def post(path, params = {})
       resp = conn.post(path) do |req|
         req.body = MultiJson.dump(params.merge('access_token' => access_token))
